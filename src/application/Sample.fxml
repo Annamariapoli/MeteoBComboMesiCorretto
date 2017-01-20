@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="application.SampleController">
+   <top>
+      <Label text="Meteo B" textFill="#dd0cd0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Mese" />
+                  <ComboBox fx:id="comboMese" prefWidth="150.0" />
+                  <Button fx:id="btnUmidita" mnemonicParsing="false" onAction="#doUmidita" text="Umidità" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Seq ottimale citta" />
+                  <Button fx:id="btnCalcola" mnemonicParsing="false" onAction="#doCalcola" text="Calcola" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <TextArea fx:id="txtResult" editable="false" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
